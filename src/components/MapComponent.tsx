@@ -1,11 +1,19 @@
 "use client";
-import React, { useEffect } from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 function MapComponent() {
 
+  const key = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  if(!key){
+    // you can throw error here and
+    // let [Error Boundary](https://reactjs.org/docs/error-boundaries.html)
+    // handle it
+    // or return an component that says "Google Token is not set"
+    throw new Error('Google token is not set');
+  }
+
   return (
-    <LoadScript googleMapsApiKey="AIzaSyDGWBgZcQRtqka5vHAk00X_AHm4C1gfA7g">
+    <LoadScript googleMapsApiKey={key}>
       <div id="map" className="h-400 w-full" />
       <GoogleMap
         mapContainerStyle={{width: '400px', height: '400px'}}
