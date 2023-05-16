@@ -44,8 +44,6 @@ function MapComponent({ foodTrucks } : { foodTrucks: Array<object> }) {
   }
 
   useEffect(() => {
-    console.log(selectedFoodTruck, 'selectedFoodTruck');
-    console.log('modalOpen', modalOpen);
     if (selectedFoodTruck) {
       setModalOpen(true);
     }

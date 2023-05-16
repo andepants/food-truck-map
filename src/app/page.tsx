@@ -32,7 +32,7 @@ export default function Home() {
         return approvedFoodTrucks
       })
       .then((approvedFoodTrucks) => {
-        console.log('approvedFoodTrucks', approvedFoodTrucks);
+        // console.log('approvedFoodTrucks', approvedFoodTrucks);
         setFoodTrucks(approvedFoodTrucks);
       })
       .catch(error => {
