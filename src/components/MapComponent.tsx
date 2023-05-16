@@ -1,7 +1,17 @@
 "use client";
 import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { sfNeighbordhoods, Neighborhood } from '../../public/sfNeighborhoods';
+
+interface FoodTruck {
+  address: string;
+  applicant: string;
+  footitems: string;
+  latitude: string;
+  longitude: string;
+  status: string;
+  fooditems: string;
+}
 
 function MapComponent({ foodTrucks } : { foodTrucks: Array<object> }) {
 
@@ -9,6 +19,8 @@ function MapComponent({ foodTrucks } : { foodTrucks: Array<object> }) {
   const [ selectedNeighborhood, setSelectedNeighborhood ] = useState<object>({ lat: 37.77632714778992, lng: -122.39179682107691 });
   const [ mapZoom, setMapZoom ] = useState<number>(12);
   const [ dropDownOpen, setDropDownOpen ] = useState<boolean>(false);
+  const [ selectedFoodTruck, setSelectedFoodTruck ] = useState<FoodTruck | null>(null);
+  const [ modalOpen, setModalOpen ] = useState<boolean>(false);
 
   const key = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   if(!key){
@@ -22,6 +34,22 @@ function MapComponent({ foodTrucks } : { foodTrucks: Array<object> }) {
     setDropDownOpen(false);
     setMapZoom(15);
   }
+
+   const handleFoodTruckClick = (foodTruck : FoodTruck) => {
+    if (foodTruck !== selectedFoodTruck) {
+      setSelectedFoodTruck(foodTruck);
+    } else {
+      setModalOpen(true);
+    }
+  }
+
+  useEffect(() => {
+    console.log(selectedFoodTruck, 'selectedFoodTruck');
+    console.log('modalOpen', modalOpen);
+    if (selectedFoodTruck) {
+      setModalOpen(true);
+    }
+  }, [selectedFoodTruck]);
 
   return (
     <>
@@ -45,13 +73,30 @@ function MapComponent({ foodTrucks } : { foodTrucks: Array<object> }) {
           return (
             <MarkerF
               key={index}
-              position={{ lat : Number(foodTruck.latitude), lng: Number(foodTruck.longitude) }}
               title={foodTruck.applicant}
+              position={{ lat : Number(foodTruck.latitude), lng: Number(foodTruck.longitude) }}
+              clickable={true}
+              onClick={() => handleFoodTruckClick(foodTruck)}
             />
           );
         })}
         </GoogleMap>
       </LoadScript>
+      {modalOpen && (
+        <div>
+          <div className="modal modal-open modal-bottom sm:modal-middle">
+          <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+            <div className="modal-box">
+              <label onClick={() => setModalOpen(false)} className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+              <h3 className="font-bold text-lg">{selectedFoodTruck?.applicant}</h3>
+              <p className="py-1 underline">Address</p>
+              <p className="pb-3">{selectedFoodTruck?.address}</p>
+              <p className="py-1 underline">Type of Food</p>
+              <p className="pb-4">{selectedFoodTruck?.fooditems}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
