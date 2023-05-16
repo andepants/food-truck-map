@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Food Truck Map',
-  description: 'Finds Nearby Food Trucks',
+  title: 'SF Food Truck Map',
+  description: 'Finds Nearby Food Trucks in SF',
 }
 
 export default function RootLayout({
