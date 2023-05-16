@@ -21,6 +21,7 @@ function MapComponent({ foodTrucks } : { foodTrucks: Array<object> }) {
             <MarkerF
               key={index}
               position={{ lat : Number(foodTruck.latitude), lng: Number(foodTruck.longitude) }}
+              title={foodTruck.applicant}
             />
           );
         })}
