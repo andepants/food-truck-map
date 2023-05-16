@@ -14,7 +14,7 @@ function MapComponent({ foodTrucks } : { foodTrucks: Array<object> }) {
         <GoogleMap
           mapContainerStyle={{width: '400px', height: '400px'}}
           center={{ lat: 37.77632714778992, lng: -122.39179682107691 }}
-          zoom={15}
+          zoom={10}
         >
           {foodTrucks?.map((foodTruck : any, index: number) => {
           return (
