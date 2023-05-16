@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import MapComponent from "../components/MapComponent";
 const axios = require('axios').default;
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
 
@@ -47,6 +48,7 @@ return (
     <div>
       <h3 className='flex justify-center m-2 text-center font-bold text-5xl'>SF Food Truck Map</h3>
       <MapComponent foodTrucks={foodTrucks}/>
+      <Analytics />
     </div>
   );
 }
