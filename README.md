@@ -11,6 +11,11 @@ https://www.lighthall.co/challenge/3a7be660-3207-414b-bbf2-742d1b93ace4
 
 - GitHub: [@andepants](https://github.com/andepants)
 
+## Tech Stack
+- TypeScript
+- NextJs
+- TailwindCSS + DaisyUI
+- Google Maps API
 
 ## Features
 
@@ -29,4 +34,4 @@ https://www.lighthall.co/challenge/3a7be660-3207-414b-bbf2-742d1b93ace4
 3. ?????
 4. npm run dev OR yarn run dev
 
-Deployed on Vercel @ https://food-truck-map-mocha.vercel.app/
+Deployed on Vercel @ [SF Food Truck Map]https://food-truck-map-mocha.vercel.app/
