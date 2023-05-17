@@ -25,6 +25,7 @@ https://www.lighthall.co/challenge/3a7be660-3207-414b-bbf2-742d1b93ace4
 
 ## Screenshots
 
+![ScreenShot](https://github.com/andepants/food-truck-map/assets/59150695/07e19544-91fc-43a2-b7fc-f29f25718ff2)
 
 
 
