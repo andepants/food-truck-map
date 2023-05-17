@@ -1,7 +1,7 @@
 
 # SF Food Truck Map
 
-Finds Nearby Food Trucks in SF
+Finds Nearby Food Trucks in SF : https://food-truck-map-mocha.vercel.app/
 
 This app was a project for the Lighthall Week 1 Challenge Competition:
 
@@ -22,17 +22,11 @@ https://www.lighthall.co/challenge/3a7be660-3207-414b-bbf2-742d1b93ace4
 - Modal Popup for more details
 - Mobile UI Friendly
 
-
-## Screenshots
-
-![ScreenShot](https://github.com/andepants/food-truck-map/assets/59150695/07e19544-91fc-43a2-b7fc-f29f25718ff2)
-
-
-
-## Deployment
+## Local Deployment
 
 1. Create .env.local in root directory.
 2. Add your google maps API key: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY="YOUR KEY HERE"
 3. ?????
 4. npm run dev OR yarn run dev
 
+Deployed on Vercel @ https://food-truck-map-mocha.vercel.app/
