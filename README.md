@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# SF Food Truck Map
 
-First, run the development server:
+Finds Nearby Food Trucks in SF
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+This app was a project for the Lighthall Week 1 Challenge Competition:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://www.lighthall.co/challenge/3a7be660-3207-414b-bbf2-742d1b93ace4
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Author
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- GitHub: [@andepants](https://github.com/andepants)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Search Trucks by SF Neighborhoods DropDown
+- Google Maps API
+- Dark Mode - nice on eyes
+- Pulls from DataSF API for updated info
+- Displays only Active + Approved Food Trucks
+- Modal Popup for more details
+- Mobile UI Friendly
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Screenshots
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Deployment
+
+1. Create .env.local in root directory.
+2. Add your google maps API key: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY="YOUR KEY HERE"
+3. ?????
+4. npm run dev OR yarn run dev
+
