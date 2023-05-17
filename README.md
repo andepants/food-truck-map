@@ -1,7 +1,7 @@
 
 # SF Food Truck Map
 
-Finds Nearby Food Trucks in SF : [SF Food Truck Map]https://food-truck-map-mocha.vercel.app/
+Finds Nearby Food Trucks in SF : [SF Food Truck Map](https://food-truck-map-mocha.vercel.app/)
 
 This app was a project for the Lighthall Week 1 Challenge Competition:
 
@@ -34,4 +34,4 @@ https://www.lighthall.co/challenge/3a7be660-3207-414b-bbf2-742d1b93ace4
 3. ?????
 4. npm run dev OR yarn run dev
 
-Deployed on Vercel @ [SF Food Truck Map]https://food-truck-map-mocha.vercel.app/
+Deployed on Vercel @ [SF Food Truck Map](https://food-truck-map-mocha.vercel.app/)
